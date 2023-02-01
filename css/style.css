@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 5px solid #333;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.stone {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    animation: stone-animation 1.5s infinite linear;
+}
+
+.character-running {
+    width: 220px;
+    position: absolute;
+    bottom: -50px;
+}
+
+.clouds {
+    position: absolute;
+    width: 300px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.jump {
+    animation: jump-animation 700ms ease-out;
+}
+
+@keyframes stone-animation {
+    from {
+        right: -150px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump-animation {
+    0% {
+        bottom: -50px;
+    }
+
+    40% {
+        bottom: 150px;
+    }
+
+    60% {
+        bottom: 150px;
+    }
+
+    50% {
+        bottom: 150px;
+    }
+
+    100% {
+        bottom: -50px;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -300px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
